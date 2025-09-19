@@ -213,3 +213,4 @@ logs/
 cred.py
 data/.minio.sys/buckets/.bloomcycle.bin/xl.meta
 data/.minio.sys/buckets/.usage.json/xl.meta
+#right now i want to push this shit
