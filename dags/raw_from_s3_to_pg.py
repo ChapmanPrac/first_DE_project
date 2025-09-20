@@ -10,7 +10,7 @@ from airflow.sensors.external_task import ExternalTaskSensor
 
 # Конфигурация DAG
 OWNER = "k.chapurin"
-DAG_ID = "raw_from_api_to_s3"
+DAG_ID = "raw_from_s3_to_pg"
 
 # Используемые таблицы в DAG
 LAYER = "raw"
@@ -70,7 +70,7 @@ def get_and_transfer_raw_data_to_ods_pg(**context):
             TYPE postgres,
             HOST 'postgres_dwh',
             PORT 5432,
-            DATABASE postgres,
+            DATABASE postgres_dwh,
             USER 'postgres',
             PASSWORD '{PASSWORD}'
         );
