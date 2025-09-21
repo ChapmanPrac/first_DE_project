@@ -112,6 +112,7 @@ services:
     build:
       context: .
       dockerfile: ./metabase/Dockerfile
+    restart: always
     container_name: metabase
     ports:
       - "3000:3000"
